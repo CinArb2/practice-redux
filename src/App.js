@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pagina/Home";
+import About from './pagina/About'
+import Contact from './pagina/Contact'
 import './App.css';
+import NotFound from "./pagina/NotFound";
+import Header from "./components/Header";
+import ProductDetail from "./pagina/ProductDetail";
+import Carrito from "./pagina/Carrito";
+import { Provider } from 'react-redux'
+import store from "./Redux/store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <div className="App">
+        <Header/>
+        <Routes>
+            <Route path="/" element={ <Home/> } />
+            <Route path="/About" element={ <About/> } />
+            <Route path="/Contact" element={ <Contact/> } />
+            <Route path="/Carrito" element={ <Carrito/> } />
+            <Route path="/Product/:id" element={ <ProductDetail/> } />
+            <Route path="*" element={ <NotFound/> } />
+        </Routes>
+      </div>
+    </Provider>  
+  ); 
 }
 
 export default App;

@@ -1,38 +1,174 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.3;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid gray;
+}
+
+
+h2{
+  text-align: center;
+  padding: 4rem;
+}
+h3{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.container-products{
+  border: 1px solid gray;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-block: 3rem;
+}
+
+.product-card{
+  border: 1px solid gray;
+  width: 300px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+.product-card > *{
+  margin-block: 0.5rem;
+}
+
+.product-detail{
+  display: flex;
+  width: min(80%, 1300px);
+  margin: 0 auto;
+  border: 1px solid gray;
+  padding: 2rem;
+  min-height: 80vh;
+  margin-block: 1rem;
+}
+
+.product-img, .product-info{
+  width: 50%;
+  height: 100%;
+}
+
+.item-details > *{
+  margin-block: 0.5rem;
+}
+
+.product-info{
+  height: 75vh;
+  border-left: 1px solid gray;
+  padding-left: 1rem;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+}
+
+.navLink{
+  padding-inline: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo{
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(234, 135, 152);
+}
+
+.btn-back{
+  margin-top: 60%;
+  font-size: 2rem;
+  background-color: yellow;
+}
+
+.add-cart{
+  background-color: yellowgreen;
+}
+
+.carrito{
+  width: min(80%, 1300px);
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table{
+  width: 100%;
+  border: 1px solid gray;
+  border-spacing: 1rem;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+th{
+  border-bottom: 1px solid gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{
+  background-color: rgb(236, 185, 193);
+  margin-inline: 0.5rem;
 }
